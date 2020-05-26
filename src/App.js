@@ -3,15 +3,15 @@ import './App.css';
 import { TabGroup, Tab } from 'react-material-tabs';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Home from './components/Home';
-import About from './components/About';
-import MeetTheStaff from './components/MeetTheStaff';
-import Gallery from './components/Gallery';
-import Facilities from './components/Facilities';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import About from './pages/About';
+import MeetTheStaff from './pages/MeetTheStaff';
+import Gallery from './pages/Gallery';
+import Facilities from './pages/Facilities';
+import Contact from './pages/Contact';
 
 const tabs = [
-	{ linkTo: '/home', label: 'Home' },
+	{ linkTo: '/', label: 'Home' },
 	{ linkTo: '/about', label: 'About' },
 	{ linkTo: '/meetTheStaff', label: 'Meet the Staff' },
 	{ linkTo: '/gallery', label: 'Gallery' },
@@ -32,12 +32,12 @@ class Layout extends React.Component {
 				</div>
 
 				<Switch>
-					<Route path='/home'><Home/></Route>
-					<Route path='/about'><About/></Route>
-					<Route path='/meetTheStaff'><MeetTheStaff/></Route>
-					<Route path='/gallery'><Gallery/></Route>
-					<Route path='/facilities'><Facilities/></Route>
-					<Route path='/contact'><Contact/></Route>
+					<Route exact path='/'><Home /></Route>
+					<Route exact path='/about'><About /></Route>
+					<Route exact path='/meetTheStaff'><MeetTheStaff /></Route>
+					<Route exact path='/gallery'><Gallery /></Route>
+					<Route exact path='/facilities'><Facilities /></Route>
+					<Route exact path='/contact'><Contact /></Route>
 				</Switch>
 			</Router>
 		);
