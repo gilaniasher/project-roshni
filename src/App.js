@@ -24,6 +24,7 @@ class Layout extends React.Component {
 	render() {
 		return (
 			<div className='background-container'>
+			<div className='page-container'>
 			<Router>
 				<div className='tab-container'>
 					<div style={{ width: 700}}>
@@ -44,6 +45,7 @@ class Layout extends React.Component {
 					</Switch>
 				</div>
 			</Router>
+			</div>
 			</div>
 		);
 	}

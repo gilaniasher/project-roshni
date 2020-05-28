@@ -23,6 +23,15 @@ export default class Home extends React.Component {
 			<div className='center-container'>
 				<h2>Home</h2>
 				<ImageGallery items={images} />
+
+				<h2>The Situation</h2>
+				<p>situation text</p>
+
+				<h2>Our Goal</h2>
+				<p>goal text</p>
+
+				<h2>Our Process</h2>
+				<p>process text</p>
 			</div>
 		);
 	}

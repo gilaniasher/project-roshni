@@ -1,6 +1,12 @@
 .background-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.page-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .tab-container {
