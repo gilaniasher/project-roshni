@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { TabGroup, Tab } from 'react-material-tabs';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Background from './images/library.jpg';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -22,24 +23,28 @@ const tabs = [
 class Layout extends React.Component {
 	render() {
 		return (
+			<div className='background-container'>
 			<Router>
-				<div style={{ backgroundColor: '#39A0ED' }}>
-					<div style={{ width: 700 }}>
+				<div className='tab-container'>
+					<div style={{ width: 700}}>
 						<TabGroup style={{ indicator: { color: '#2196f3' } }}>
 							{this.renderTabs()}
 						</TabGroup>
 					</div>
 				</div>
 
-				<Switch>
-					<Route exact path='/'><Home /></Route>
-					<Route exact path='/about'><About /></Route>
-					<Route exact path='/meetTheStaff'><MeetTheStaff /></Route>
-					<Route exact path='/gallery'><Gallery /></Route>
-					<Route exact path='/facilities'><Facilities /></Route>
-					<Route exact path='/contact'><Contact /></Route>
-				</Switch>
+				<div className='background'>
+					<Switch>
+						<Route exact path='/'><Home /></Route>
+						<Route exact path='/about'><About /></Route>
+						<Route exact path='/meetTheStaff'><MeetTheStaff /></Route>
+						<Route exact path='/gallery'><Gallery /></Route>
+						<Route exact path='/facilities'><Facilities /></Route>
+						<Route exact path='/contact'><Contact /></Route>
+					</Switch>
+				</div>
 			</Router>
+			</div>
 		);
 	}
 

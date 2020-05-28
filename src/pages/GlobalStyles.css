@@ -1,0 +1,11 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.image-gallery {
+  width: 50%;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

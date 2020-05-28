@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import './GlobalStyles.css';
 
 const images = [
 	{
@@ -19,7 +20,7 @@ const images = [
 export default class Home extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className='center-container'>
 				<h2>Home</h2>
 				<ImageGallery items={images} />
 			</div>
