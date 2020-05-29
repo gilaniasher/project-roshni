@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { TabGroup, Tab } from 'react-material-tabs';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Background from './images/library.jpg';
 
 import Home from './pages/Home';
 import About from './pages/About';

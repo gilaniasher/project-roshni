@@ -16,6 +16,7 @@
 }
 
 .background {
+  display: flex;
   background-image: url('./images/library.jpg');
   height: 100vh;
 }
