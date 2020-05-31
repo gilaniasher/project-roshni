@@ -3,19 +3,20 @@ import ImageGallery from 'react-image-gallery';
 import ReactPageScroller from 'react-page-scroller';
 import './GlobalStyles.css';
 
+import im1 from '../images/home_gallery/1.jpg';
+import im2 from '../images/home_gallery/2.jpg';
+import im3 from '../images/home_gallery/3.jpg';
+import im4 from '../images/home_gallery/4.jpg';
+import im5 from '../images/home_gallery/5.jpg';
+import im6 from '../images/home_gallery/6.jpg';
+
 const images = [
-	{
-		original: 'https://picsum.photos/id/1018/1000/600/',
-		thumbnail: 'https://picsum.photos/id/1018/250/150/',
-	},
-	{
-		original: 'https://picsum.photos/id/1015/1000/600/',
-		thumbnail: 'https://picsum.photos/id/1015/250/150/',
-	},
-	{
-		original: 'https://picsum.photos/id/1019/1000/600/',
-		thumbnail: 'https://picsum.photos/id/1019/250/150/',
-	},
+	{ original: im1, thumbnail: im1 },
+	{ original: im2, thumbnail: im2 },
+	{ original: im3, thumbnail: im3 },
+	{ original: im4, thumbnail: im4 },
+	{ original: im5, thumbnail: im5 },
+	{ original: im6, thumbnail: im6 },
 ];
 
 const panelFormatter = (children) => {
@@ -105,6 +106,7 @@ export default class Home extends React.Component {
 			<ReactPageScroller 
 				pageOnChange={this.handlePageChange}
 				customPageNumber={this.state.currentPage}
+				showThumbnails={false}
 			>
 				{panels.map((panel) => panelFormatter(panel))}
 			</ReactPageScroller>

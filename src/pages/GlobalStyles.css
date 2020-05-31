@@ -1,7 +1,7 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 .image-gallery {
-  width: 50%;
+  width: 100%
 }
 
 .home-center-container {
