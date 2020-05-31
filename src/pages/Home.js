@@ -18,40 +18,74 @@ const images = [
 	},
 ];
 
-const situation = () => {
+const panelFormatter = (children) => {
 	return (
-		<div className='center-container'>
-			<h2>The Situation</h2>
-			<p>situation text</p>
-		</div>
-	);
-};
-
-const goal = () => {
-	return (
-		<div className='center-container'>
-			<h2>Our Goal</h2>
-			<p>goal text</p>
-		</div>
-	);
-};
-
-const process = () => {
-	return (
-		<div className='center-container'>
-			<h2>Our Process</h2>
-			<p>process text</p>
-		</div>
-	);
-};
-
-const gallery = () => {
-	return (
-		<div className='center-container'>
-			<ImageGallery items={images} />
+		<div className='home-center-container'>
+			<div className='home-panel'>
+				{children}
+			</div>
 		</div>
 	);
 }
+
+const panels = [
+	<>
+		<h2>The Situation</h2>
+		<p>
+			Even after thousands of government-sanctioned schools have opened 
+			across India, many children do not attend school. These schools 
+			are free and provide free food. So why don't children attend?
+		</p>
+		<ul>
+			<li>Distance of travel</li>
+			<li>Family problems</li>
+			<li>Capacity limitations</li>
+			<li>System unwilling to address issues</li>
+		</ul>
+	</>,
+
+	<>
+		<h2>Who We Are</h2>
+		<p>
+			Project Roshni is a nonprofit aimed to provide children in India with 
+			a decent education.
+		</p>
+		<ul>
+			<li>Books too heavy? We provide free bags</li>
+			<li>No such thing as a free lunch? There is for Roshni students</li>
+			<li>Can't afford pencils? We provide free stationery</li>
+		</ul>
+
+	</>,
+
+	<>
+		<h2>Our Goals</h2>
+		<ul>
+			<li>
+				Teach students enough English and basic math so that they can continue 
+				learning online or attend an actual school
+			</li>
+			<li>
+				We want to open 100 schools in India, but since our services are free 
+				for students, we need your donations
+			</li>
+		</ul>
+	</>,
+
+	<>
+		<h2>Our Process</h2>
+		<ul>
+			<li>Rent out buildings for instruction to take place</li>
+			<li>Find volunteers to teach English and basic math</li>
+			<li>Transport desks and stationary to instructional site</li>
+			<li>Inform students about other schools in the area or online opportunities</li>
+		</ul>
+	</>,
+
+	<>
+		<ImageGallery items={images} />
+	</>
+];
 
 export default class Home extends React.Component {
 	constructor(props) {
@@ -72,10 +106,7 @@ export default class Home extends React.Component {
 				pageOnChange={this.handlePageChange}
 				customPageNumber={this.state.currentPage}
 			>
-				{situation()}
-				{goal()}
-				{process()}
-				{gallery()}
+				{panels.map((panel) => panelFormatter(panel))}
 			</ReactPageScroller>
 		);
 	}
