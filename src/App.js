@@ -23,7 +23,6 @@ class Layout extends React.Component {
 	render() {
 		return (
 			<div className='background-container'>
-			<div className='page-container'>
 			<Router>
 				<div className='tab-container'>
 					<div style={{ width: 700}}>
@@ -34,6 +33,7 @@ class Layout extends React.Component {
 				</div>
 
 				<div className='background'>
+				<div className='page-container'>
 					<Switch>
 						<Route exact path='/'><Home /></Route>
 						<Route exact path='/meetTheStaff'><MeetTheStaff /></Route>
@@ -43,8 +43,8 @@ class Layout extends React.Component {
 						<Route exact path='/donate'><Donate /></Route>
 					</Switch>
 				</div>
+				</div>
 			</Router>
-			</div>
 			</div>
 		);
 	}

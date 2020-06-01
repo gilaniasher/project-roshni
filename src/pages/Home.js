@@ -2,13 +2,15 @@ import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import ReactPageScroller from 'react-page-scroller';
 import './GlobalStyles.css';
+import { MdDirectionsRun, MdClear } from 'react-icons/md'
+import { FaChild, FaAngry, FaArrowDown } from 'react-icons/fa';
 
 import im1 from '../images/home_gallery/1.jpg';
-import im2 from '../images/home_gallery/2.jpg';
-import im3 from '../images/home_gallery/3.jpg';
-import im4 from '../images/home_gallery/4.jpg';
-import im5 from '../images/home_gallery/5.jpg';
-import im6 from '../images/home_gallery/6.jpg';
+import im2 from '../images/home_gallery/2.JPG';
+import im3 from '../images/home_gallery/3.JPG';
+import im4 from '../images/home_gallery/4.JPG';
+import im5 from '../images/home_gallery/5.JPG';
+import im6 from '../images/home_gallery/6.JPG';
 
 const images = [
 	{ original: im1, thumbnail: im1 },
@@ -35,14 +37,30 @@ const panels = [
 		<p>
 			Even after thousands of government-sanctioned schools have opened 
 			across India, many children do not attend school. These schools 
-			are free and provide free food. So why don't children attend?
+			are free and provide free food.
 		</p>
-		<ul>
-			<li>Distance of travel</li>
-			<li>Family problems</li>
-			<li>Capacity limitations</li>
-			<li>System unwilling to address issues</li>
-		</ul>
+		<p>
+			So why don't children attend?
+		</p>
+		<div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+			<div className='icon-text'>
+				<MdDirectionsRun size='20vh' />
+				<p>Distance of travel</p>
+			</div>
+			<div className='icon-text'>
+				<FaChild size='20vh' />
+				<p>Family problems</p>
+			</div>
+			<div className='icon-text'>
+				<MdClear size='20vh' />
+				<p>Capacity limitations</p>
+			</div>
+			<div className='icon-text'>
+				<FaAngry size='20vh' />
+				<p>System unwilling to address issues</p>
+			</div>
+		</div>
+		<FaArrowDown size='5vh' style={{ paddingBottom: 50, marginBottom: 'auto' }} />
 	</>,
 
 	<>

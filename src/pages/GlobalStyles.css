@@ -1,24 +1,35 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Condensed:wght@300&display=swap');
 
 .image-gallery {
-  width: 100%
+  width: 100%;
 }
 
 .home-center-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .home-panel {
   width: 70%;
   text-align: center;
+  font-size: 1.5vw;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.home-panel > h2 {
+  font-family: 'Raleway', sans-serif;
 }
 
 .home-panel > ul {
   display: inline-block;
   text-align: left;
+}
+
+.icon-text {
+  flex-direction: column;
 }
